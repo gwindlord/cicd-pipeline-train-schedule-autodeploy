@@ -3,7 +3,8 @@ pipeline {
     environment {
         //be sure to replace "willbla" with your own Docker Hub username
         DOCKER_IMAGE_NAME = "gwindlord/train-schedule"
-        CANARY_REPLICAS = 0
+        CANARY_REPLICAS = 0 // if this is really the ony way to make it removing the pods, this sucker does not look like production tool
+        // why not just to remove the canary deployment instead
     }
     stages {
         stage('Build') {
